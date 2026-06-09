@@ -65,15 +65,15 @@ class ConverterGUI:
 
     def create_main_frame(self):
 
-        main_frame = Frame(self.container)
-        main_frame.grid(row=0, column=0, sticky="nsew")
+        MainFrame = Frame(self.container)
+        MainFrame.grid(row=0, column=0, sticky="nsew")
 
-        Label(main_frame, text="Temperature Converter", font=FONT_MAIN_TITLE).grid(row=0, columnspan=2, sticky="nsew")
+        Label(MainFrame, text="Temperature Converter", font=FONT_MAIN_TITLE).grid(row=0, columnspan=2, sticky="nsew")
         
-        Button(main_frame, text="to Centigrade", bg="yellow", font=FONT_HEADER, command=lambda:self.show_frame("to_cFrame")).grid(row=1, column=0, sticky="nsew")
-        Button(main_frame, text="to Farenheight", bg="pink", font=FONT_HEADER, command=lambda:self.show_frame("to_fFrame")).grid(row=1, column=1, sticky="nsew")
+        Button(MainFrame, text="to Centigrade", bg="yellow", font=FONT_HEADER, command=lambda:self.show_frame("to_cFrame")).grid(row=1, column=0, sticky="nsew")
+        Button(MainFrame, text="to Farenheight", bg="pink", font=FONT_HEADER, command=lambda:self.show_frame("to_fFrame")).grid(row=1, column=1, sticky="nsew")
 
-        return main_frame
+        return MainFrame
 
     def create_to_cFrame(self):
         to_cFrame = Frame(self.container)
